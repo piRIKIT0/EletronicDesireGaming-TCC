@@ -95,14 +95,17 @@ header {
 
 .container {
   background-color: #fff;
+  text-align: center;
+}
+
+.left, .right {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .left img {
-  width: 550px;
-  height: auto;
-  object-fit: contain;
-  display: block;
   margin: 0 auto;
+  display: block;
 }
 
 .right {

@@ -113,7 +113,7 @@
 
           function mover(direcao) {
             posicao += direcao * itemLargura;
-            const maxPosicao = 0;
+            const maxPosicao = (carrossel.children.length * itemLargura - visibleWidth);
             const minPosicao = -(carrossel.children.length * itemLargura - visibleWidth);
             if (posicao > maxPosicao) posicao = maxPosicao;
             if (posicao < minPosicao) posicao = minPosicao;
@@ -193,7 +193,7 @@
         </div>
 
         <footer>
-            <img style="object-fit: contain; width: 250px; cursor: pointer;" id="logo" src="./assets/logodosite2.png" alt="Logo Electronic Desire Gaming rodapé" />
+            <img style="object-fit: contain; width: 250px; cursor: pointer;" id="logo" src="./assets/EDG.png" alt="Logo Electronic Desire Gaming rodapé" />
             <span>Todos os direitos reservados ©</span>
         </footer>    
 
