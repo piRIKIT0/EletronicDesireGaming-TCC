@@ -41,6 +41,11 @@ body {
   padding: 10px;
 }
 
+.input-group:focus-within {
+  border-color: #ffa24c;
+  box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+}
+
 .input-group i {
   color: #ccc;
   margin-right: 10px;
