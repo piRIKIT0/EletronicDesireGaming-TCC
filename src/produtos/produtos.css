@@ -21,10 +21,6 @@ header {
     transition: transform 0.3s;
 }
 
-.menu-icon:hover {
-    transform: scale(1.1);
-}
-
 .logo img {
     max-height: 50px;
     flex: 1;
