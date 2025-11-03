@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./carrinho.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+            <div class="logo">
+                <img src="./assets/EDG.png" alt="Logo Electronic Desire Gaming" />
+            </div>
+            <div class="user-options">
+                <a href="#"><b>Entre ou Cadastre-se</b></a>
+                <span class="icons">
+                    <span title="Acessibilidade"><img class="acessibilidade" src="./assets/assecibilidade.png" alt="Ícone de acessibilidade" /></span>
+                    <span title="Ajuda"><img class="ajuda" src="./assets/supotimage.png" alt="Ícone de ajuda/suporte" /></span>
+                    <span title="Favoritos"><img class="favorito" src="./assets/favorite copy.png" alt="Ícone de favoritos" /></span>
+                    <span title="Carrinho"><img class="carrinho" src="./assets/carrinho.png" alt="Ícone do carrinho de compras" /></span>
+                </span>
+            </div>
+        </header>
+
+    <main class="container">
+        <section class="cart">
+            <div class="alert">
+                ⚡ Não deixe seus itens escaparem! Finalize a compra e garanta agora.
+            </div>
+
+            <div class="product-box">
+                <div class="product-info">
+                    <img src="https://img.kabum.com.br/produtos/fotos/108537/headset-gamer-havit-drivers-53mm-microfone-plugavel-hv-h2002d_1619602563_gg.jpg"
+                        alt="Headset Gamer">
+                    <div>
+                        <h3>Headset Gamer Havit, Drivers 53mm, Microfone Plugável, 3.5mm, PC, PS4, XBOX ONE, Preto -
+                            HV-H2002D</h3>
+                        <p>Com desconto no PIX: <strong>R$ 179,99</strong></p>
+                        <p>Parcelado sem juros: R$ 211,75</p>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <button>-</button>
+                    <input type="text" value="1" readonly>
+                    <button>+</button>
+                </div>
+            </div>
+
+            <div class="services">
+                <h4>Garantia Estendida Original Ampliada</h4>
+                <label><input type="radio" name="garantia"> Sem garantia</label><br>
+                <label><input type="radio" name="garantia" checked> 12 Meses de Garantia Estendida Kabum - R$
+                    42,63</label><br>
+                <label><input type="radio" name="garantia"> 24 Meses de Garantia Estendida Kabum</label>
+            </div>
+        </section>
+
+        <aside class="summary">
+            <h3>Resumo</h3>
+            <p><strong>Valor dos Produtos:</strong> R$ 211,75</p>
+            <p><strong>Serviços Adicionais:</strong> R$ 42,63</p>
+            <hr>
+            <p><strong>Total a prazo:</strong> R$ 254,38</p>
+            <p class="pix"><strong>Valor à vista no PIX:</strong> R$ 222,62</p>
+            <p class="economy">(Economize: R$ 31,76)</p>
+
+            <button class="continue">CONTINUAR</button>
+            <button class="back">VOLTAR</button>
+        </aside>
+    </main>
+</body>
+</html>
