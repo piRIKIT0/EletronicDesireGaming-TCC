@@ -20,17 +20,14 @@ header {
     color: #fff;
 }
 
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
 .logo img {
-  max-height: 100px;
-  cursor: pointer;
-  transition: border 0.3s, box-shadow 0.3s;
+    max-height: 100px;
+    flex: 1;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin-left: 500px;
+    cursor: pointer;
+    transition: border 0.3s, box-shadow 0.3s;
 }
 
 .user-options {
@@ -175,14 +172,32 @@ header {
 .continue {
   background-color: #ff6600;
   color: white;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.continue:hover {
+  background-color: #e9e9e9;
+  color: #000;
 }
 
 .back {
   background-color: white;
   border: 1px solid #ff6600;
   color: #ff6600;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .back:hover {
-  background-color: #fff2e6;
+  color: #9f4203;
+}
+
+footer {
+    margin: 150px 0 20px;
+    padding: 16px;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
 }

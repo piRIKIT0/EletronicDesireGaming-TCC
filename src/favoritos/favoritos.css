@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    background-color: #fff;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 10px;
+    background-color: #353535;
+    color: #fff;
+}
+
+.logo img {
+    max-height: 100px;
+    flex: 1;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin-left: 500px;
+    cursor: pointer;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-options a {
+    margin-right: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-family: sans-serif;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.user-options a:hover {
+    transform: scale(1.05);
+    color: #ff6600;
+}
+
+.icons img {
+    width: 30px;
+    cursor: pointer;
+}
+
+    .favoritos {
+      width: 90%;
+      margin: 20px auto;
+    }
+
+    .favoritos h2 {
+      color: #222;
+      display: flex;
+      align-items: center;
+      font-size: 1.8em;
+    }
+
+    .favoritos h2::before {
+      content: "❤️";
+      margin-right: 10px;
+    }
+
+    /* Card de Produto */
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-top: 15px;
+    }
+
+    .card img {
+      width: 120px;
+      border-radius: 4px;
+    }
+
+    .info {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .info h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    .info p {
+      margin: 5px 0;
+      color: #555;
+      font-size: 0.9em;
+    }
+
+    .rating {
+      color: #ff6600;
+      margin-top: 5px;
+    }
+
+    .price {
+      text-align: right;
+    }
+
+    .price s {
+      color: #888;
+      font-size: 0.9em;
+    }
+
+    .price strong {
+      color: #ff6600;
+      font-size: 1.5em;
+      display: block;
+    }
+
+    .btn-comprar {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .btn-comprar:hover {
+      background-color: #e05400;
+    }
+
+    .heart {
+      color: #ff6600;
+      font-size: 1.5em;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    footer {
+    margin: 150px 0 20px;
+    padding: 16px;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+   }

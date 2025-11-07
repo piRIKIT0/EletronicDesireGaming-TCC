@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -31,11 +32,6 @@ header {
     transition: border 0.3s, box-shadow 0.3s;
 }
 
-.logo img:hover {
-    border: 2px solid #ff6600;
-    box-shadow: 0 0 10px 2px rgba(255, 102, 0, 0.8);
-}
-
 .search-bar {
     display: flex;
     align-items: center;
@@ -44,7 +40,7 @@ header {
 }
 
 .search-bar input {
-    width: 80%;
+    width: 100%;
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -139,7 +135,7 @@ header {
 
 .produto-detalhes .preco {
   font-size: 24px;
-  color: #d00;
+  color: #ff6600;
   margin-bottom: 5px;
 }
 
