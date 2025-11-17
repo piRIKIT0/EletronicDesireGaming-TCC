@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
     font-family: "Roboto", sans-serif;
 }
 
@@ -110,6 +111,7 @@ header {
   border-radius: 12px;
   padding: 20px;
   margin: 0 auto;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,6 +190,102 @@ header {
   border: none;
   border-radius: 4px;
   padding: 6px 10px;
+}
+
+.produtos-card-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    background-color: #5c5c5c;
+    padding: 20px 0;
+}
+
+.titulo-produtos-container {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.titulo-produtos {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 700;
+    background-color: #ff6600;
+    color: #fff;
+}
+
+.produtos {
+    width: 250px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: transform 0.3s;
+}
+
+.produtos:hover {
+    transform: scale(1.05);
+}
+
+.produtos img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.paragrafo {
+    height: 80px;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 10px 0;
+    padding: 20px;
+    text-align: center;
+    color: #5c5c5c;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.preço {
+    font-size: 20px;
+    color: #ff6600;
+    text-align: center;
+    margin-top: auto;
+}
+
+.botao {
+    width: 120px;
+    height: 50px;
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.botao:hover {
+    background-color: #e9e9e9;
+    color: #000;
 }
 
 footer {
