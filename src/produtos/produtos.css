@@ -288,6 +288,29 @@ header {
     color: #000;
 }
 
+.descriçao-container {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 700;;
+    color: #ff6600;
+}
+
+.SOBRE-container {
+    height: 60px;
+    width: 100%;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #797878;
+}
+
+
+
 footer {
     margin: 150px 0 20px;
     padding: 16px;
