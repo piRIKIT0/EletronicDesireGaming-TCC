@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+
     <div class="container">
         <header>
             <div class="menu-icon">☰</div>
@@ -23,17 +23,54 @@
             <div class="user-options">
                 <a href="#"><b>Entre ou Cadastre-se</b></a>
                 <span class="icons">
-                    <span title="Ajuda"><img class="ajuda" src="./assets/supotimage.png" alt="Ícone de ajuda/suporte" /></span>
-                    <span title="Favoritos"><img class="favorito" src="./assets/favorite copy.png" alt="Ícone de favoritos" /></span>
-                    <span title="Carrinho"><img class="carrinho" src="./assets/carrinho.png" alt="Ícone do carrinho de compras" /></span>
+                    <span title="Ajuda"><img class="ajuda" src="./assets/supotimage.png"
+                            alt="Ícone de ajuda/suporte" /></span>
+                    <span title="Favoritos"><img class="favorito" src="./assets/favorite copy.png"
+                            alt="Ícone de favoritos" /></span>
+                    <span title="Carrinho"><img class="carrinho" src="./assets/carrinho.png"
+                            alt="Ícone do carrinho de compras" /></span>
                 </span>
             </div>
         </header>
-    
-        <div id="banner">
-            <img src="./assets/Banner.jpg" alt="Banner promocional Friday Black - Compre aqui!" />
+
+        <div class="banner-wrapper">
+            <button class="banner-btn left">❮</button>
+
+            <div class="banner-track">
+                <img src="./assets/Banner.jpg" class="banner-item" alt="">
+                <img src="./assets/Banner-2.jpg" class="banner-item" alt="">
+                <img src="banner3.jpg" class="banner-item" alt="">
+            </div>
+
+            <button class="banner-btn right">❯</button>
         </div>
-    
+
+        <script>
+            const bannerTrack = document.querySelector(".banner-track");
+            const btnLeft = document.querySelector(".banner-btn.left");
+            const btnRight = document.querySelector(".banner-btn.right");
+
+            let bannerIndex = 0;
+            const banners = document.querySelectorAll(".banner-item");
+            const totalBanners = banners.length;
+
+            function updateBanner() {
+                bannerTrack.style.transform = `translateX(-${bannerIndex * 100}%)`;
+            }
+
+            btnRight.addEventListener("click", () => {
+                bannerIndex++;
+                if (bannerIndex >= totalBanners) bannerIndex = 0;
+                updateBanner();
+            });
+
+            btnLeft.addEventListener("click", () => {
+                bannerIndex--;
+                if (bannerIndex < 0) bannerIndex = totalBanners - 1;
+                updateBanner();
+            });
+        </script>
+
         <div class="titulo-produtos-container">
             <div class="titulo-produtos">
                 <p><b>ESQUENTA BLACK🖤</b></p>
@@ -42,40 +79,48 @@
         <div class="produtos-card-container">
             <div class="produtos">
                 <img src="./assets/console-playstation-5-sony-slim-branco-2-jogos-1000038899_1710512868_m.jpg"
-                    class="image-produtos" alt="Console PlayStation 5 Slim Sony, SSD 1TB, Branco com Controle DualSense" />
-                <p class="paragrafo"><b>Console PlayStation 5 Slim Sony, SSD 1TB, Com Controle Sem Fio DualSense, Branco...</b></p>                
+                    class="image-produtos"
+                    alt="Console PlayStation 5 Slim Sony, SSD 1TB, Branco com Controle DualSense" />
+                <p class="paragrafo"><b>Console PlayStation 5 Slim Sony, SSD 1TB, Com Controle Sem Fio DualSense,
+                        Branco...</b></p>
                 <p class="preço"><b>R$ 3.347,07</b></p>
                 <button class="botao">Comprar</button>
             </div>
-    
+
             <div class="produtos">
                 <img src="./assets/placa-de-video-galax-geforce-rtx-3060-1-click-oc-15-gbps-12gb-gddr6-ray-tracing-dlss-36nol7md1voc_1614253646_m.jpg"
                     class="image-produtos" alt="Placa de Vídeo Galax RTX 3060 12GB OC" />
-                <p class="paragrafo"><b>Placa de Vídeo RTX 3060 1-Click OC Galax NVIDIA GeForce, 12GB GDDR6, LHR, DLSS, Ray Tracing</b></p>
+                <p class="paragrafo"><b>Placa de Vídeo RTX 3060 1-Click OC Galax NVIDIA GeForce, 12GB GDDR6, LHR, DLSS,
+                        Ray Tracing</b></p>
                 <p class="preço"><b>R$ 1.639,99</b></p>
                 <button class="botao">Comprar</button>
             </div>
-    
+
             <div class="produtos">
                 <img src="./assets/gabinete-gamer-rise-mode-galaxy-glass-standard-white-10-fans-argb-rm-ga-ggsw-argb_1685731687_m.jpg"
-                    class="image-produtos" alt="Gabinete Gamer Rise Mode Galaxy Glass Standard Mid Tower Branco com 10 Fans ARGB" />
-                <p class="paragrafo"><b>Gabinete Gamer Rise Mode Galaxy Glass Standard, Mid Tower, ARGB, ATX, Lateral...</b></p> 
+                    class="image-produtos"
+                    alt="Gabinete Gamer Rise Mode Galaxy Glass Standard Mid Tower Branco com 10 Fans ARGB" />
+                <p class="paragrafo"><b>Gabinete Gamer Rise Mode Galaxy Glass Standard, Mid Tower, ARGB, ATX,
+                        Lateral...</b></p>
                 <p class="preço"><b>R$ 519,90</b></p>
                 <button class="botao">Comprar</button>
             </div>
-    
+
             <div class="produtos">
                 <img src="./assets/monitor-gamer-lg-ultragear-lg-34-curvo-led-wqhd-ultrawide-160hz-1ms-displayport-e-hdmi-amd-freesync-premium-hdr10-99-srgb-34gp63a-b_1717591886_m.jpg"
                     class="image-produtos" alt="Monitor Gamer Curvo LG UltraGear 34 polegadas UltraWide 160Hz WQHD" />
-                <p class="paragrafo"><b>Monitor Gamer Curvo LG UltraGear LG 34", UltraWide, 160Hz, WQHD, 1ms, DisplayPort...</b></p>
+                <p class="paragrafo"><b>Monitor Gamer Curvo LG UltraGear LG 34", UltraWide, 160Hz, WQHD, 1ms,
+                        DisplayPort...</b></p>
                 <p class="preço"><b>R$ 1.927,99</b></p>
                 <button class="botao">Comprar</button>
             </div>
-    
+
             <div class="produtos">
                 <img src="./assets/teclado-optico-mecanico-gamer-redragon-broadsword-pro-rgb-switch-redragon-blue-abnt-k588-rgb_1602177625_m.jpg"
-                    class="image-produtos" alt="Teclado Óptico-Mecânico Gamer Redragon BroadSword Pro RGB Switch Blue" />
-                <p class="paragrafo"><b>Teclado Óptico-Mecânico Gamer Redragon BroadSword Pro RGB, Switch Redragon Blue</b></p>
+                    class="image-produtos"
+                    alt="Teclado Óptico-Mecânico Gamer Redragon BroadSword Pro RGB Switch Blue" />
+                <p class="paragrafo"><b>Teclado Óptico-Mecânico Gamer Redragon BroadSword Pro RGB, Switch Redragon
+                        Blue</b></p>
                 <p class="preço"><b>R$ 359,99</b></p>
                 <button class="botao">Comprar</button>
             </div>
@@ -86,43 +131,71 @@
                 <p><b>MARCAS RECOMENDADAS</b></p>
             </div>
         </div>
-    
+
         <div class="marcas-cards-wrapper">
-           <div class="marcas-cards-container">
+            <div class="marcas-cards-container">
                 <button class="seta esquerda" onclick="mover(-1)"> &#8249;</button>
                 <div class="marcas-contant" id="carrossel">
-                    <div class="card banner-1"><img src="./assets/91731510485.jpg" class="marcas-image" alt="Banner Marca 1" /></div>
-                    <div class="card banner-2"><img src="./assets/01731940231.jpg" class="marcas-image" alt="Banner Marca 2" /></div>
-                    <div class="card banner-3"><img src="./assets/61731940009.jpg" class="marcas-image" alt="Banner Marca 3" /></div>
-                    <div class="card banner-4"><img src="./assets/81731940195.jpg" class="marcas-image" alt="Banner Marca 4" /></div>
-                    <div class="card banner-5"><img src="./assets/71731351617.jpg" class="marcas-image" alt="Banner Marca 5" /></div>
-                    <div class="card banner-6"><img src="./assets/21731940069.jpg" class="marcas-image" alt="Banner Marca 6" /></div>
-                    <div class="card banner-7"><img src="./assets/91731510485 copy.jpg" class="marcas-image" alt="Banner Marca 7" /></div>
+                    <div class="card banner-1"><img src="./assets/Captura de tela 2025-12-01 161330.png" class="marcas-image"
+                            alt="Banner Marca 1" /></div>
+                    <div class="card banner-2"><img src="./assets/01731940231.jpg" class="marcas-image"
+                            alt="Banner Marca 2" /></div>
+                    <div class="card banner-3"><img src="./assets/61731940009.jpg" class="marcas-image"
+                            alt="Banner Marca 3" /></div>
+                    <div class="card banner-4"><img src="./assets/81731940195.jpg" class="marcas-image"
+                            alt="Banner Marca 4" /></div>
+                    <div class="card banner-5"><img src="./assets/71731351617.jpg" class="marcas-image"
+                            alt="Banner Marca 5" /></div>
+                    <div class="card banner-6"><img src="./assets/21731940069.jpg" class="marcas-image"
+                            alt="Banner Marca 6" /></div>
+                    <div class="card banner-7"><img src="./assets/91731510485 copy.jpg" class="marcas-image"
+                            alt="Banner Marca 7" /></div>
+                    <div class="card banner-8"><img src="./assets/NVIDIA-logo-BL_thmb.jpg" class="marcas-image"
+                            alt="Banner Marca 8" /></div>
+                    <div class="card banner-9"><img src="./assets/AMD-logo.jpg" class="marcas-image"
+                            alt="Banner Marca 9" /></div>
+                    <div class="card banner-10"><img src="./assets/samsung-logo.jpg" class="marcas-image"
+                            alt="Banner Marca 10" /></div>
                 </div>
                 <button class="seta direita" onclick="mover(1)">&#8250;</button>
-           </div>
+            </div>
         </div>
 
         <script>
-          let posicao = 0;
-          const carrossel = document.getElementById("carrossel");
-          const card = carrossel.querySelector(".card");
-          const itemLargura = card.offsetWidth + 20; 
-          let visibleWidth = document.querySelector(".marcas-cards-container").offsetWidth;
+            const carrossel = document.getElementById("carrossel");
+            let cards = [...carrossel.children];
 
-          function mover(direcao) {
-            posicao += direcao * itemLargura;
-            const maxPosicao = (carrossel.children.length * itemLargura - visibleWidth);
-            const minPosicao = -(carrossel.children.length * itemLargura - visibleWidth);
-            if (posicao > maxPosicao) posicao = maxPosicao;
-            if (posicao < minPosicao) posicao = minPosicao;
-            carrossel.style.transform = `translateX(${posicao}px)`;
-          }
+            cards.forEach(card => {
+                const clone = card.cloneNode(true);
+                clone.classList.add("clone");
+                carrossel.appendChild(clone);
+            });
 
-          window.addEventListener("resize", () => {
-            visibleWidth = document.querySelector(".marcas-cards-container").offsetWidth;
-          });
+            let index = 0;
+            const cardWidth = cards[0].offsetWidth + 20;
+            const totalCards = carrossel.children.length;
+
+            function mover(direcao) {
+                index += direcao;
+
+                carrossel.style.transition = "transform 0.4s ease";
+                carrossel.style.transform = `translateX(${-index * cardWidth}px)`;
+
+                setTimeout(() => {
+                    if (index >= cards.length) {
+                        carrossel.style.transition = "none";
+                        index = 0;
+                        carrossel.style.transform = `translateX(0px)`;
+                    }
+                    if (index < 0) {
+                        carrossel.style.transition = "none";
+                        index = cards.length - 1;
+                        carrossel.style.transform = `translateX(${-index * cardWidth}px)`;
+                    }
+                }, 420);
+            }
         </script>
+
 
         <div class="titulo-produtos-container">
             <div class="titulo-produtos">
@@ -131,36 +204,43 @@
         </div>
         <div class="produtos-card-container">
             <div class="produtos">
-                <img src="./assets/ps4.jpg" class="image-produtos" alt="Console PlayStation 4 Slim 1TB Preto com Controle Dualshock 4" />
-                <p class="paragrafo"><b>Console Sony Playstation 4 Slim, 1TB, Standard Jet Black Com controle Dualshock 4, Preto...</b></p>                
+                <img src="./assets/ps4.jpg" class="image-produtos"
+                    alt="Console PlayStation 4 Slim 1TB Preto com Controle Dualshock 4" />
+                <p class="paragrafo"><b>Console Sony Playstation 4 Slim, 1TB, Standard Jet Black Com controle Dualshock
+                        4, Preto...</b></p>
                 <p class="preço"><b>R$ 2.999,00</b></p>
                 <button class="botao">Comprar</button>
             </div>
-    
+
             <div class="produtos">
                 <img src="./assets/xbox.jpg" class="image-produtos" alt="Console Xbox Series X 1TB Preto" />
                 <p class="paragrafo"><b>Console Xbox Series X, 1TB, Microsoft, Preto</b></p>
                 <p class="preço"><b>R$ 5.978,16</b></p>
                 <button class="botao">Comprar</button>
             </div>
-    
+
             <div class="produtos">
-                <img src="./assets/dualsense.jpg" class="image-produtos" alt="Controle DualSense Edge PS5 Sem Fio Branco e Preto" />
-                <p class="paragrafo"><b>Controle Sony Dualsense Edge PS5, Sem Fio, Preto e Branco</b></p> 
+                <img src="./assets/dualsense.jpg" class="image-produtos"
+                    alt="Controle DualSense Edge PS5 Sem Fio Branco e Preto" />
+                <p class="paragrafo"><b>Controle Sony Dualsense Edge PS5, Sem Fio, Preto e Branco</b></p>
                 <p class="preço"><b>R$ 1.115,07</b></p>
                 <button class="botao">Comprar</button>
             </div>
-    
+
             <div class="produtos">
-                <img src="./assets/placa de video.jpg" class="image-produtos" alt="Placa de Vídeo Gigabyte RTX 5090 AORUS MASTER 32GB GDDR7 com RGB" />
-                <p class="paragrafo"><b>Placa de Vídeo Gigabyte RTX 5090 AORUS MASTER 32G NVIDIA GeForce, 32GB, GDDR7, RGB, G-Sync, Ray Tracing...</b></p>
+                <img src="./assets/placa de video.jpg" class="image-produtos"
+                    alt="Placa de Vídeo Gigabyte RTX 5090 AORUS MASTER 32GB GDDR7 com RGB" />
+                <p class="paragrafo"><b>Placa de Vídeo Gigabyte RTX 5090 AORUS MASTER 32G NVIDIA GeForce, 32GB, GDDR7,
+                        RGB, G-Sync, Ray Tracing...</b></p>
                 <p class="preço"><b>R$ 20.499,99</b></p>
                 <button class="botao">Comprar</button>
             </div>
-    
+
             <div class="produtos">
-                <img src="./assets/headset.jpg" class="image-produtos" alt="Headset Gamer Sem Fio Astro A50 Gen 5 Branco com Base Station" />
-                <p class="paragrafo"><b>Headset Gamer Sem Fio Astro Gaming A50 LIGHTSPEED + Base Station (Gen 5) Com Tecnologia PLAYSYNC AUDIO, Bluetooth, Branco</b></p>
+                <img src="./assets/headset.jpg" class="image-produtos"
+                    alt="Headset Gamer Sem Fio Astro A50 Gen 5 Branco com Base Station" />
+                <p class="paragrafo"><b>Headset Gamer Sem Fio Astro Gaming A50 LIGHTSPEED + Base Station (Gen 5) Com
+                        Tecnologia PLAYSYNC AUDIO, Bluetooth, Branco</b></p>
                 <p class="preço"><b>R$ 1.899,99</b></p>
                 <button class="botao">Comprar</button>
             </div>
@@ -189,14 +269,18 @@
             <a href="#">samsung s24</a>
             <a href="#">notebook gamer</a>
             <a href="#">rtx 4060 ti</a>
+            <a href="#">mouse</a>
+            <a href="#">teclado mecanico</a>
         </div>
 
         <footer>
-            <img style="object-fit: contain; width: 150px; cursor: pointer;" id="logo" src="./assets/EDG.png" alt="Logo Electronic Desire Gaming rodapé" />
-            <span>Todos os direitos reservados ©</span>
-        </footer>    
+            <img style="object-fit: contain; width: 150px; cursor: pointer;" id="logo" src="./assets/EDG.png"
+                alt="Logo Electronic Desire Gaming rodapé" />
+            <span>Todos os direitos reservados 2025 ©</span>
+        </footer>
 
     </div>
 
 </body>
+
 </html>

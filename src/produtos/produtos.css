@@ -288,27 +288,69 @@ header {
     color: #000;
 }
 
-.descriçao-container {
-    height: 60px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-family: sans-serif;
-    font-weight: 700;;
-    color: #ff6600;
+
+.descricao-titulo {
+  font-size: 25px;
+  color: #ff6600;
+  height: 60px;
+  width: 100%;
+  margin-bottom: 35px;
+  margin-top: 100px;
 }
 
-.SOBRE-container {
-    height: 60px;
-    width: 100%;
-    font-size: 24px;
-    font-family: sans-serif;
+.descricao-produto {
+    font-family: 'Inter', sans-serif;
+    color: #4A4A4A;
+    max-width: 900px;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.descricao-produto h2,
+.descricao-produto h3,
+.descricao-produto p,
+.descricao-produto li {
+    margin-left: 0;
+}
+
+
+.paragrafo-descriçao {
+    height: auto;
+    padding: 0;
+  font-weight: bold;
+  font-size: 16px;
+    color: #505050;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.descricao-nome {
+    font-size: 28px;
     font-weight: 700;
-    color: #797878;
+    margin-bottom: 25px;
+    color: #3A3A3A;
 }
 
+.descricao-produto h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    margin-top: 25px;
+    color: #333;
+}
+
+.lista-descricao {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.lista-descricao li {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #4A4A4A;
+}
 
 
 footer {
