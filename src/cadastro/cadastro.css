@@ -65,7 +65,7 @@ form input:focus {
 .checkbox input {
     margin-right: 8px;
     accent-color: #ff6a00;
-    
+
 }
 
 .checkbox a {
@@ -110,11 +110,4 @@ form input:focus {
 .btn-cancelar:hover {
     background-color: #ff6a00;
     color: #fff;
-}
-
-@media (max-width: 400px) {
-    .form-box {
-        width: 90%;
-        padding: 25px;
-    }
 }

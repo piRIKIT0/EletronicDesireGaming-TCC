@@ -12,7 +12,7 @@
 
     <div class="container">
         <header>
-            <div class="menu-icon">☰</div>
+            <div class="menu-icon" id="menuToggle">☰</div>
             <div class="logo">
                 <img src="./assets/EDG.png" alt="Logo Electronic Desire Gaming" />
             </div>
@@ -22,24 +22,59 @@
             </div>
             <div class="user-options">
                 <a href="#"><b>Entre ou Cadastre-se</b></a>
-                <span class="icons">
-                    <span title="Ajuda"><img class="ajuda" src="./assets/supotimage.png"
-                            alt="Ícone de ajuda/suporte" /></span>
-                    <span title="Favoritos"><img class="favorito" src="./assets/favorite copy.png"
-                            alt="Ícone de favoritos" /></span>
-                    <span title="Carrinho"><img class="carrinho" src="./assets/carrinho.png"
-                            alt="Ícone do carrinho de compras" /></span>
-                </span>
+                <ul class="icons">
+                    <a title="Ajuda"><img class="ajuda" src="./assets/supotimage.png"
+                            alt="Ícone de ajuda/suporte" /></a>
+                    <a title="Favoritos"><img class="favorito" src="./assets/favorite copy.png"
+                            alt="Ícone de favoritos" /></a>
+                    <a title="Carrinho"><img class="carrinho" src="./assets/carrinho.png"
+                            alt="Ícone do carrinho de compras" /></a>
+                </ul>
             </div>
         </header>
+
+        <nav class="sidebar-menu" id="sidebarMenu">
+            <div class="close-btn" id="closeBtn">&times;</div>
+            <ul>
+                <li><a class="menu-icon-options" href="#">Hardware</a></li>
+                <li><a class="menu-icon-options" href="#">Periféricos</a></li>
+                <li><a class="menu-icon-options" href="#">Computadores</a></li>
+                <li><a class="menu-icon-options" href="#">Notebooks</a></li>
+                <li><a class="menu-icon-options" href="#">Games</a></li>
+                <li><a class="menu-icon-options" href="#">Smartphones</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            const menuToggle = document.getElementById('menuToggle');
+            const sidebarMenu = document.getElementById('sidebarMenu');
+            const overlay = document.getElementById('overlay');
+            const closeBtn = document.getElementById('closeBtn');
+            function toggleMenu() {
+                sidebarMenu.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+
+            menuToggle.addEventListener('click', toggleMenu);
+
+            closeBtn.addEventListener('click', toggleMenu);
+
+            overlay.addEventListener('click', toggleMenu);
+
+            document.querySelectorAll('.sidebar-menu ul li a').forEach(item => {
+                item.addEventListener('click', () => {
+                    toggleMenu();
+                });
+            });
+        </script>
 
         <div class="banner-wrapper">
             <button class="banner-btn left">❮</button>
 
             <div class="banner-track">
-                <img src="./assets/Banner.jpg" class="banner-item" alt="">
+                <img src="./assets/Banner-1.png" class="banner-item" alt="">
                 <img src="./assets/Banner-2.jpg" class="banner-item" alt="">
-                <img src="banner3.jpg" class="banner-item" alt="">
+                <img src="./assets/Banner-3.png" class="banner-item" alt="">
             </div>
 
             <button class="banner-btn right">❯</button>
@@ -136,8 +171,8 @@
             <div class="marcas-cards-container">
                 <button class="seta esquerda" onclick="mover(-1)"> &#8249;</button>
                 <div class="marcas-contant" id="carrossel">
-                    <div class="card banner-1"><img src="./assets/Captura de tela 2025-12-01 161330.png" class="marcas-image"
-                            alt="Banner Marca 1" /></div>
+                    <div class="card banner-1"><img src="./assets/Captura de tela 2025-12-01 161330.png"
+                            class="marcas-image" alt="Banner Marca 1" /></div>
                     <div class="card banner-2"><img src="./assets/01731940231.jpg" class="marcas-image"
                             alt="Banner Marca 2" /></div>
                     <div class="card banner-3"><img src="./assets/61731940009.jpg" class="marcas-image"

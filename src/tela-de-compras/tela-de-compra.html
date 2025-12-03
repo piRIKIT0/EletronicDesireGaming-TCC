@@ -1,77 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./tela-de-compra.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
-            <div class="logo">
-                <img src="./assets/EDG.png" alt="Logo Electronic Desire Gaming" />
-            </div>
-            <div class="user-options">
-                <a href="#"><b>Entre ou Cadastre-se</b></a>
-                <span class="icons">
-                    <span title="Ajuda"><img class="ajuda" src="./assets/supotimage.png" alt="Ícone de ajuda/suporte" /></span>
-                    <span title="Favoritos"><img class="favorito" src="./assets/favorite copy.png" alt="Ícone de favoritos" /></span>
-                    <span title="Carrinho"><img class="carrinho" src="./assets/carrinho.png" alt="Ícone do carrinho de compras" /></span>
-                </span>
-            </div>
-        </header>
-
-        <div class="progresso-container">
-            <ul class="progress-steps">
-                <li class="step"><i class="fas fa-shopping-cart"></i> Carrinho</li>
-                <li class="step">———</li>
-                <li class="step"><i class="fas fa-map-marker-alt"></i> Endereço</li>
-                <li class="step">———</li>
-                <li class="step"><i class="fas fa-truck"></i> Entrega</li>
-                <li class="step">———</li>
-                <li class="step active"><i class="far fa-credit-card"></i> Pagamento</li>
-                <li class="step">———</li>
-                <li class="step"><i class="far fa-check-circle"></i> Confirmação</li>
+        <div class="logo">
+            <img src="./assets/EDG.png" alt="Logo Electronic Desire Gaming" />
+        </div>
+        <div class="user-options">
+            <a href="#"><b>Entre ou Cadastre-se</b></a>
+            <ul class="icons">
+                <a title="Ajuda"><img class="ajuda" src="./assets/supotimage.png" alt="Ícone de ajuda/suporte" /></a>
+                <a title="Favoritos"><img class="favorito" src="./assets/favorite copy.png"
+                        alt="Ícone de favoritos" /></a>
+                <a title="Carrinho"><img class="carrinho" src="./assets/carrinho.png"
+                        alt="Ícone do carrinho de compras" /></a>
             </ul>
         </div>
+    </header>
 
-    <div class="container">
-        <section class="payment-section">
-            <h2><i class="far fa-eye"></i> FORMA DE PAGAMENTO</h2>
+    <div class="progresso-container">
+        <ul class="progress-steps">
+            <li class="step active"><i class="fas fa-shopping-cart"></i> Carrinho</li>
+            <li class="step">———</li>
+            <li class="step active"><i class="fas fa-map-marker-alt"></i> Endereço</li>
+            <li class="step ">———</li>
+            <li class="step active"><i class="far fa-credit-card"></i> Pagamento</li>
+            <li class="step">———</li>
+            <li class="step"><i class="far fa-check-circle"></i> Confirmação</li>
+        </ul>
+    </div>
 
-            <div class="payment-option selected">
-                <div class="option-header">
-                    <div class="radio-label">
-                        <div class="custom-radio"></div>
-                        <span>PIX</span>
-                    </div>
-                    <i class="fas fa-qrcode pix-icon"></i>
-                </div>
-                <div class="option-details">
-                    Até <strong>22% de desconto</strong> com <strong>aprovação imediata</strong> que torna a <strong>expedição mais rápida</strong> do pedido.
-                </div>
-            </div>
+    <div class="main-container">
+        <div class="payment-methods">
 
-            <div class="payment-option">
-                <div class="option-header">
-                    <div class="radio-label">
-                        <div class="custom-radio"></div>
-                        <span>CARTÃO DE CRÉDITO</span>
-                    </div>
-                    <i class="far fa-credit-card card-icon"></i>
+            <label class="payment-option">
+                <input type="radio" name="payment" />
+                <div class="payment-info">
+                    <strong>PIX</strong>
+                    <span>Até 22% de desconto com aprovação imediata.</span>
                 </div>
-            </div>
+            </label>
 
-            <div class="payment-option">
-                <div class="option-header">
-                    <div class="radio-label">
-                        <div class="custom-radio"></div>
-                        <span>NUPAY</span>
-                    </div>
-                    <i class="fab fa-cc-mastercard card-icon" style="color: purple;"></i>
+            <label class="payment-option">
+                <input type="radio" name="payment" />
+                <div class="payment-info">
+                    <strong>Cartão de Crédito</strong>
+                    <span>Parcelamento em até 12x conforme regras da loja.</span>
                 </div>
-            </div>
-        </section>
+            </label>
+
+            <label class="payment-option">
+                <input type="radio" name="payment" />
+                <div class="payment-info">
+                    <strong>Nupay</strong>
+                    <span>Pague com Nupay com condições especiais.</span>
+                </div>
+            </label>
+
+        </div>
+
+        <script>
+            const options = document.querySelectorAll(".payment-option");
+
+            options.forEach(option => {
+                option.addEventListener("click", () => {
+
+                    options.forEach(o => o.classList.remove("selected"));
+
+                    option.classList.add("selected");
+                });
+            });
+        </script>
 
         <aside class="order-summary">
             <div class="summary-box">
@@ -115,4 +121,5 @@
     </footer>
 
 </body>
+
 </html>

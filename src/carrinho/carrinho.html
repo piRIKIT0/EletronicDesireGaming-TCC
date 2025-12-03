@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./carrinho.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
-            <div class="logo">
-                <img src="./assets/EDG.png" alt="Logo Electronic Desire Gaming" />
-            </div>
-            <div class="user-options">
-                <a href="#"><b>Entre ou Cadastre-se</b></a>
-                <span class="icons">
-                    <span title="Ajuda"><img class="ajuda" src="./assets/supotimage.png" alt="Ícone de ajuda/suporte" /></span>
-                    <span title="Favoritos"><img class="favorito" src="./assets/favorite copy.png" alt="Ícone de favoritos" /></span>
-                    <span title="Carrinho"><img class="carrinho" src="./assets/carrinho.png" alt="Ícone do carrinho de compras" /></span>
-                </span>
-            </div>
-        </header>
+        <div class="logo">
+            <img src="./assets/EDG.png" alt="Logo Electronic Desire Gaming" />
+        </div>
+        <div class="user-options">
+            <a href="#"><b>Entre ou Cadastre-se</b></a>
+            <ul class="icons">
+                <a title="Ajuda"><img class="ajuda" src="./assets/supotimage.png" alt="Ícone de ajuda/suporte" /></a>
+                <a title="Favoritos"><img class="favorito" src="./assets/favorite copy.png"
+                        alt="Ícone de favoritos" /></a>
+                <a title="Carrinho"><img class="carrinho" src="./assets/carrinho.png"
+                        alt="Ícone do carrinho de compras" /></a>
+            </ul>
+        </div>
+    </header>
+
+    <div class="progresso-container">
+        <ul class="progress-steps">
+            <li class="step active"><i class="fas fa-shopping-cart"></i> Carrinho</li>
+            <li class="step">———</li>
+            <li class="step"><i class="fas fa-map-marker-alt"></i> Endereço</li>
+            <li class="step ">———</li>
+            <li class="step"><i class="far fa-credit-card"></i> Pagamento</li>
+            <li class="step">———</li>
+            <li class="step"><i class="far fa-check-circle"></i> Confirmação</li>
+        </ul>
+    </div>
 
     <main class="container">
         <section class="cart">
@@ -33,9 +48,10 @@
                     <img src="./assets/console-playstation-5-sony-slim-branco-2-jogos-1000038899_1710512868_m.jpg"
                         alt="PlayStation 5 Edição Digital" />
                     <div>
-                        <h3>Console Sony PlayStation 5, Edição Digital, SSD 825GB, Controle Sem Fio DualSense + 2 Jogos Digitais - 1000050614</h3>
-                        <p>Com desconto no PIX: <strong>R$ 3.626,07</strong></p>
-                        <p>Parcelado sem juros: R$ 3.899,00</p>
+                        <h3>Console Sony PlayStation 5, Edição Digital, SSD 825GB, Controle Sem Fio DualSense + 2 Jogos
+                            Digitais - 1000050614</h3>
+                        <p>Com desconto no PIX: <strong>R$ 2.827,32</strong></p>
+                        <p>Parcelado sem juros: R$ 2.999,00</p>
                     </div>
                 </div>
             </div>
@@ -49,24 +65,47 @@
             </div>
         </section>
 
-        <aside class="summary">
-            <h3>Resumo</h3>
-            <p><strong>Valor dos Produtos:</strong>R$ 3.899,00</p>
-            <p><strong>Serviços Adicionais:</strong> R$ 42,63</p>
-            <hr>
-            <p><strong>Total a prazo:</strong> R$ 3.899,00</p>
-            <p class="pix"><strong>Valor à vista no PIX:</strong> R$ 3.626,07</p>
-            <p class="economy">(Economize: R$ 272,93)</p>
+        <aside class="order-summary">
+            <div class="summary-box">
+                <div class="summary-header">
+                    <i class="fas fa-file-invoice-dollar"></i> RESUMO
+                </div>
 
-            <button class="continue">CONTINUAR</button>
-            <button class="back">VOLTAR</button>
+                <div class="summary-row">
+                    <span>Valor dos Produtos:</span>
+                    <strong>R$ 2.999,00</strong>
+                </div>
+
+                <div class="summary-row discount">
+                    <span>Descontos:</span>
+                    <strong>- R$ 209,93</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Frete:</span>
+                    <strong>R$ 38,25</strong>
+                </div>
+
+                <div class="total-box">
+                    <div class="total-label">
+                        <span>Valor à vista no <strong>PIX:</strong></span>
+                        <span style="font-size: 10px; opacity: 0.8;">(Economize: <strong>R$ 209,93</strong>)</span>
+                    </div>
+                    <div class="total-price">R$ 2.827,32</div>
+                </div>
+
+                <button class="btn btn-primary">CONTINUAR</button>
+                <button class="btn btn-outline">VOLTAR</button>
+            </div>
         </aside>
     </main>
-    
+
     <footer>
-        <img style="object-fit: contain; width: 150px; cursor: pointer;" id="logo" src="./assets/EDG.png" alt="Logo Electronic Desire Gaming rodapé" />
+        <img style="object-fit: contain; width: 150px; cursor: pointer;" id="logo" src="./assets/EDG.png"
+            alt="Logo Electronic Desire Gaming rodapé" />
         <span>Todos os direitos reservados 2025 ©</span>
     </footer>
 
 </body>
+
 </html>

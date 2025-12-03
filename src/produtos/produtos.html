@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <header>
-            <div class="menu-icon">☰</div>
+            <div class="menu-icon" id="menuToggle">☰</div>
             <div class="logo">
                 <img src="./assets/EDG.png" alt="Logo Electronic Desire Gaming" />
             </div>
@@ -21,16 +21,51 @@
             </div>
             <div class="user-options">
                 <a href="#"><b>Entre ou Cadastre-se</b></a>
-                <span class="icons">
-                    <span title="Ajuda"><img class="ajuda" src="./assets/supotimage.png"
-                            alt="Ícone de ajuda/suporte" /></span>
-                    <span title="Favoritos"><img class="favorito" src="./assets/favorite copy.png"
-                            alt="Ícone de favoritos" /></span>
-                    <span title="Carrinho"><img class="carrinho" src="./assets/carrinho.png"
-                            alt="Ícone do carrinho de compras" /></span>
-                </span>
+                <ul class="icons">
+                    <a title="Ajuda"><img class="ajuda" src="./assets/supotimage.png"
+                            alt="Ícone de ajuda/suporte" /></a>
+                    <a title="Favoritos"><img class="favorito" src="./assets/favorite copy.png"
+                            alt="Ícone de favoritos" /></a>
+                    <a title="Carrinho"><img class="carrinho" src="./assets/carrinho.png"
+                            alt="Ícone do carrinho de compras" /></a>
+                </ul>
             </div>
         </header>
+
+        <nav class="sidebar-menu" id="sidebarMenu">
+            <div class="close-btn" id="closeBtn">&times;</div>
+            <ul>
+                <li><a class="menu-icon-options" href="#">Hardware</a></li>
+                <li><a class="menu-icon-options" href="#">Periféricos</a></li>
+                <li><a class="menu-icon-options" href="#">Computadores</a></li>
+                <li><a class="menu-icon-options" href="#">Notebooks</a></li>
+                <li><a class="menu-icon-options" href="#">Games</a></li>
+                <li><a class="menu-icon-options" href="#">Smartphones</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            const menuToggle = document.getElementById('menuToggle');
+            const sidebarMenu = document.getElementById('sidebarMenu');
+            const overlay = document.getElementById('overlay');
+            const closeBtn = document.getElementById('closeBtn');
+            function toggleMenu() {
+                sidebarMenu.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+
+            menuToggle.addEventListener('click', toggleMenu);
+
+            closeBtn.addEventListener('click', toggleMenu);
+
+            overlay.addEventListener('click', toggleMenu);
+
+            document.querySelectorAll('.sidebar-menu ul li a').forEach(item => {
+                item.addEventListener('click', () => {
+                    toggleMenu();
+                });
+            });
+        </script>
 
         <div class="produto-container">
             <div class="left">
@@ -65,10 +100,6 @@
                     <button class="botao-comprar">COMPRAR AGORA</button>
                     <button class="botao-carrinho">ADICIONAR AO CARRINHO</button>
 
-                    <div class="cep-container">
-                        <input type="text" placeholder="Inserir CEP">
-                        <button>OK</button>
-                    </div>
                 </div>
             </div>
         </div>
